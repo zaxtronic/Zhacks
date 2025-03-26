@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cápsula Corp. - Z-Hacks // Registro GBA v1.4 //</title> <!-- Título actualizado -->
+    <!-- CSS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Enlace al CSS Brutal v2.0 (Asegúrate que este archivo existe y está completo) -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="https://capsulacorp-zhacks.blogspot.com/favicon.ico" type="image/x-icon">
+    <!-- Estilos necesarios para contenido de posts y filtros (Confirmar en style.css) -->
+     <style>
+        /* Asegúrate que estos estilos (o equivalentes) estén en tu style.css */
+        .post-full-content img { max-width: 100%; height: auto; margin: 1.5rem auto; display: block; border-radius: var(--border-radius-sharp); border: 1px solid var(--border-glow); box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
+        .post-full-content p { margin-bottom: 1.2rem; line-height: 1.8; opacity: 0.9;}
+        .post-full-content h4, .post-full-content h5, .post-full-content h6 { color: var(--neon-lime); margin-top: 2rem; margin-bottom: 0.8rem; text-shadow: 0 0 5px var(--neon-lime); letter-spacing: 0.5px;}
+        .post-full-content ul, .post-full-content ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+        .post-full-content li { margin-bottom: 0.5rem; }
+        .post-full-content blockquote { font-size: 1.1rem; padding: 1rem; margin: 1.5rem 0; background: rgba(24, 30, 42, 0.6); border-left: 4px solid var(--neon-magenta); color: var(--text-glow); font-style: italic;}
+        .post-image-featured { border: 2px solid var(--neon-teal); box-shadow: var(--shadow-glow-teal); margin-bottom: 2rem; }
+        /* Estilos filtros simulados */
+        .filter-sim-group { border-bottom: 1px solid var(--border-glow); padding-bottom: 1rem; }
+        .btn-filter { font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; background: transparent; border: 1px solid var(--border-glow); color: var(--text-dim); border-radius: var(--border-radius-sharp); margin: 0 5px 10px 6px; padding: 0.4rem 0.8rem; transition: all 0.3s ease; clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));}
+        .btn-filter:hover, .btn-filter.active { background: var(--neon-teal); color: var(--bg-darkest); border-color: var(--neon-teal); box-shadow: 0 0 10px var(--neon-teal); transform: translateY(-2px); }
+        /* Ajuste snippet */
+        .post-content-snippet.snippet-text { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: calc(1.6em * 4); } /* Limitar altura de snippets */
+     </style>
+</head>
+<body>
+    <a id="top"></a>
+
+    <!-- ============== Navbar ============== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg cc-navbar">
+        <div class="container">
+            <a class="navbar-brand logo d-flex align-items-center" href="index.html">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRQqKFZ5Es-ExEVoutL-aUz8PiL9-c1dhvIj0yW-c4-w43mJfLMSyEOOv70wuQ2boo-N_M5VoCdW9L4s3btRnBz2_j2YrflffiDRJft2uVWDmVMjeIaVM82CLuHwyyGnuHBYwcumBoPeLntNeItZWH6L4AWvkMoyOfkoiv08Pd-INDJBw/s45/bmc.png" alt="Cápsula Corp Logo" class="me-2" height="30">
+                CÁPSULA CORP. <span class="logo-z">Z</span><span class="logo-hacks">-HACKS GBA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">INICIO</a></li> <!-- Active -->
+                    <!-- Estos enlaces podrían llevar a secciones (#hacks-gallery-section) si esa galería estuviera aquí, o a la página separada -->
+                    <li class="nav-item"><a class="nav-link" href="hacks.html">HACKS GBA</a></li> <!-- Mantenido a página separada por claridad -->
+                    <li class="nav-item"><a class="nav-link" href="about.html">ACERCA DE</a></li>
+                    <li class="nav-item me-lg-2"><a class="nav-link" href="contact.html">CONECTAR</a></li>
+                    <li class="nav-item"><a href="https://www.patreon.com/zhacks" target="_blank" rel="noopener noreferrer" class="btn btn-patreon btn-sm"><i class="fab fa-patreon me-1"></i> Patreon</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ============== Fin Navbar ============== -->
+
+    <main>
+        <div class="container py-5">
+             <h1 class="visually-hidden">Últimas Entradas del Blog - Cápsula Corp Z-Hacks</h1>
+
+            <!-- ===== POST DESTACADO ===== -->
+            <section id="featured-post-section" class="mb-5">
+                 <h2 class="text-center mb-5 section-title"><i class="fas fa-star me-3 text-warning"></i> Transmisión Prioritaria //</h2>
+                 <article class="card project-card post-entry featured-post-card mx-auto" style="max-width: 1000px;" id="post-summary-8224531769219263128">
+                     <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgK_Isk9mLxoUOq86-IABzCAHax7V-P0ocxh0l8Z62pZNHGCVnOBd4dmHmLHsgzeWFCwXseKcdbwBcUyXx-cfkWOmk_5VKM4vuI6JfWC1TAvqC-9zz6SH1dMk7xW-HH4oylXljhLwoRrfhaopMwEmxrGXwrNsxVS2FkiwobMPV8_t6J1R7chqlS4Lh27EWF=w640-h400-p-k-no-nu" class="d-block w-100 card-img-top" alt="Preview Nuevos Combates y Teen Gohan">
+                     <div class="card-body p-4">
+                        <header class="mb-3">
+                            <!-- Título también enlaza localmente -->
+                            <h3 class="card-title font-orbitron h4 text-center text-md-start"><a href="post-nuevos-combates.html" class="text-neon-teal">Nuevos Combates y Teen Gohan</a></h3>
+                         </header>
+                        <div class="post-content-snippet description text-dim mb-4 snippet-text">
+                           <!-- Texto COMPLETO del snippet restaurado -->
+                              Se ha modificó el inicio del juego en la versión anterior del hack, pero en esta ocasión he querido dar un paso más allá. Ahora, antes de la muerte de Gohan, jugaremos con esta versión del personaje del futuro y lucharemos contra los androides nº 17 y nº18 a la vez. Se ha añadido el diálogo previo al combate adaptado del manga/anime en los cinco idiomas del juego. Se ha sustituido a Teen Gohan dándole el Gi morado que le otorga Piccolo. Este cambio también se encontrava en la versión anterior, peo se ha rediseñado su cabello tanto en base como en SSJ. Del mismo modo que se agregó a Goku con su outfit post entrenamiento, se ha hecho lo pertinente con Gohan. Al igual que Goku, con este outfit y hasta que entremos en el Torneo de Cell, Gohan podrá mantener su transformación en SSJ sin gasto de ki y sin sonido de aura. Vídeo: Se ha programado el combate de Goku vs Nº19, ya que aparecía solo a modo de cinemática. Como ocurre con el combate de Gohan y los andorides, no debemos derrota...
+                        </div>
+                        <footer class="text-end">
+                            <!-- ENLACE LOCAL -->
+                            <a href="post-nuevos-combates.html" class="btn btn-outline-secondary btn-sm post-read-more" title="Seguir leyendo Nuevos Combates y Teen Gohan ">
+                                // LEER REGISTRO COMPLETO »
+                            </a>
+                        </footer>
+                    </div>
+                 </article>
+            </section>
+            <!-- ===== FIN POST DESTACADO ===== -->
+
+            <hr class="my-5 border-glow opacity-50">
+
+            <!-- ===== GRID DE POSTS ANTERIORES ===== -->
+            <section id="previous-posts-section" class="mb-5">
+                <h2 class="text-center mb-5 section-title"><i class="fas fa-history me-3 text-info"></i>Registros Anteriores //</h2>
+                <div class="row g-4 g-lg-5 justify-content-center">
+
+                    <!-- Post: DBZ LoG II Beta -->
+                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                         <article class="card h-100 shadow-sm project-card border-0 post-entry" id="post-summary-881608210939329137">
+                            <figure class="mb-0"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEj7t114n9gygN3R0WEj92xvfWi6OH5oCIkCLGbVUxoJAItuufmhpS5stKT85KIuYb3zGBKqKyvsuBjORy2LOpEgY7ROW4FuNUVd8HaYi1R7LMmIbSY8oLHA_KnSWaX_xNOyHst-B4zZn-N2YKOAviYLaPDPQfxMOxGF1j5zSE1sEcXmbenpHYSVxR13_iXH=w256-h256-p-k-no-nu" ... alt="DBZ Legacy of Goku II"></figure>
+                            <div class="card-body d-flex flex-column p-4">
+                                <header><h3 class="card-title font-orbitron h5 mb-2"><a href="post-log2-beta.html" class="text-neon-teal">DBZ-The Legacy of Goku II</a></h3></header> <!-- ENLACE LOCAL -->
+                                <div class="post-content-snippet description text-dim flex-grow-1 mb-3 snippet-text">
+                                    <!-- Snippet completo restaurado -->
+                                     Esta es una versión beta que realicé hace algún tiempo. Nunca la lancé porque sabía que podía seguir mejorándola, pero me debo a la comunidad y no tenía ningún sentido seguir guardándola hasta que pudiera por fin acabar una versión definitiva. En esta entrada explicaré a grosso modo los cambios más relevantes en esta versión para que sepáis que aunque actualmente me encuentro mejorándola, no se queda corta en cuanto a cambios y añadidos. TEXTOS Se han corregido algunas erratas y mejorado ciertos diálogos. También se han añadido nuevos textos a escenas añadidas que no contenían el juego que podréis ver más abajo. Ejemplo: Sprites y Portraits Se han sustituidos varios portraits por los de la versión japonesa, ya que son claramente superiores. Por supuesto, a los personajes que aparezcan con atuendos nuevos se les han añadidos sus correspondientes portraits.  Del mismo modo, se han añadido las distintas ropas que visten los personajes para que sean acorde con la serie en cada...
+                                </div>
+                                <footer class="mt-auto pt-3 border-top text-end"><a href="post-log2-beta.html" class="btn btn-outline-secondary btn-sm post-read-more"> // SEGUIR LEYENDO » </a></footer> <!-- ENLACE LOCAL -->
+                            </div>
+                        </article>
+                     </div>
+
+                     <!-- Post: LoGII Novedades -->
+                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                         <article class="card h-100 shadow-sm project-card border-0 post-entry" id="post-summary-6570987457090005872">
+                            <figure class="mb-0"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgl_BAYBTjy5SRs74gHgVdeF5EW92crqDD7zDkkRBYFS33Ho7CmrArP5tsLSVsxaivsHj_EK_W6AOrANIFnz0IjdvwRCkL8kPgWiw6pbDmr9Alelz45Yx49GGFEMWNJZz65U-xA8FkjFq9zNj8o-WFVatIaWu1toQgt4xmdcUjq4oQ0x8lNAxkrxzjUOODg=w256-h256-p-k-no-nu" ... alt="DBZ LoGII Updates"></figure>
+                            <div class="card-body d-flex flex-column p-4">
+                                <header><h3 class="card-title font-orbitron h5 mb-2"><a href="post-log2-novedades.html" class="text-neon-teal">LoGII: Goku outfit, Capa Piccolo...</a></h3></header> <!-- ENLACE LOCAL -->
+                                <div class="post-content-snippet description text-dim flex-grow-1 mb-3 snippet-text">
+                                     <!-- Snippet completo restaurado -->
+                                      Capa de Piccolo Se han sustituido los sprites de Piccolo por los del Buu's Fury, el cual presenta una capa más voluminosa y acorde con la del personaje. Obviamente, Buu's Fury no contenía todos los sprites necesarios para completar la hoja de sprites de Piccolo, así que se han tenido que diseñar. Como es lógico, el tamaño de los sprites han aumentado, por lo que presenta un pequeño inconveniente tanto en el cursor de selección de personajes como en la posición de los personajes en la pantalla de cargar de partida. Como se puede observar, Piccolo invade los espacios de Gohan y Vegeta. Esto es algo que espero poder solucionar en algún momento. En cuanto al cursor, la solución que le he dado ha sido simplemente suprimirlo, ya que al estar programado para sprites de 16px de ancho, quedaba en mitad del sprite. Además, como al seleccionar cada peresonaje estos se iluminan y comienzan a caminar, el cursor era algo totalmente innecesario. Goku outfit Para hacer el juego aún más fiel ...
+                                </div>
+                                <footer class="mt-auto pt-3 border-top text-end"><a href="post-log2-novedades.html" class="btn btn-outline-secondary btn-sm post-read-more"> // SEGUIR LEYENDO » </a></footer> <!-- ENLACE LOCAL -->
+                           </div>
+                         </article>
+                     </div>
+
+                     <!-- Post: Goku Halo y Gohan Futuro -->
+                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                         <article class="card h-100 shadow-sm project-card border-0 post-entry" id="post-summary-4244322443921139992">
+                             <figure class="mb-0"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiofJgOJPjOyyAOl3msESbEiOmdP5VV43QfCz5CEB-FHuNTvkLZ7MRiDC37vkFeqe06ItVwxs4xH5tefmpopwIrM2LrLwlPbC0H0N2kmnF_bne36waYwppL5FvoxOMG22OKSMAmvzCeIPmNOi5g8m3e6eK6rFCWpo-55zxIO8tAIslUmTj0ULnezU6o9iI0=w256-h144-p-k-no-nu" ... alt="Goku Halo y Gohan Futuro"></figure>
+                            <div class="card-body d-flex flex-column p-4">
+                               <header><h3 class="card-title font-orbitron h5 mb-2"><a href="post-goku-halo.html" class="text-neon-teal">Goku Halo y Gohan del Futuro</a></h3></header> <!-- ENLACE LOCAL -->
+                               <div class="post-content-snippet description text-dim flex-grow-1 mb-3 snippet-text">
+                                   <!-- Snippet completo restaurado -->
+                                      GOKU A menos que decidas ignorar la historia y centrarte en levear a los personajes antes de derrotar a Cell, la experiencia de juego con Goku puede resultar efímera ya que no podemos jugar con él hasta su salida de la Sala del Tiempo. Además, tras derrotar a Cell, dejamos de poder usarlo de nuevo por razones obvias. La idea original es tener que cumplir algún requisito o realizar alguna acción para desbloquear a Goku de nuevo (Aún en fase de investigación). Pero esta vez, tendrá el halo característico de quienes van al Otro Mundo. Para ello he utilizado como base los sprites de Goku del Buu's Fury aplicándole ciertos retoques y añadiéndole la aureola. Para su estado en SSJ he creado de cero el cabello y aclarado los colores para simular el efecto tan característico de la serie. Una vez desbloqueado, Goku continuará con sus STATS justo por donde lo dejamos. Para sus portraits, he extraído de una versión beta del juego unos que fueron desechados y se encontraban incompletos. Ya qu...
+                                </div>
+                               <footer class="mt-auto pt-3 border-top text-end"><a href="post-goku-halo.html" class="btn btn-outline-secondary btn-sm post-read-more"> // SEGUIR LEYENDO » </a></footer> <!-- ENLACE LOCAL -->
+                           </div>
+                        </article>
+                     </div>
+
+                    <!-- Post: Modificando Textos Gráficos -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                         <article class="card h-100 shadow-sm project-card border-0 post-entry" id="post-summary-3431377916612993081">
+                            <figure class="mb-0"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhgTW4Pg6itcVU0kKy-ydMmb-kiaO-cuqS9-MT99yo_ds2ubblF3tf2bci8SA_0KwGLuL4bJ8FnuyZdq09nEMfFZsd10s3Q8kp8a2AxOnQX2gQoYdKXmSNyNoMLlty61KXV8pwIe9Ba8xPVukN6T5BA8ynyGgVl7QfsA0hae8f_IXBiSA3UEheOv4JWaZOR=w256-h133-p-k-no-nu" ... alt="Textos Gráficos LoGII"></figure>
+                             <div class="card-body d-flex flex-column p-4">
+                               <header><h3 class="card-title font-orbitron h5 mb-2"><a href="post-textos-graficos.html" class="text-neon-teal">LoG II - Modificando Textos Gráficos</a></h3></header> <!-- ENLACE LOCAL -->
+                                <div class="post-content-snippet description text-dim flex-grow-1 mb-3 snippet-text">
+                                   <!-- Snippet completo restaurado -->
+                                  Siempre que encuentro un texto que pueda ser corregido, mejorado, sustituido por lore de la franquicia o traducido al español, me pongo a ello. A veces el resultado no es merecedor del tedioso trabajo y la dedicación que puedan llegar a suponer y necesitar, pero mi cabezonería y perfeccionismo ganan la batalla. Por suerte LoG 2 no contiene muchos textos gráficos para traducir o corregir - no puedo decir lo mismo de los sprites-. Los mapas de este juego resultan bastante entretenidos de modificar, pues están formados por varios tilesets que no son tan fáciles de encontrar, y para más inri, algunos tienen "efectos" que añaden un extra a la dificultad. Party/Fiesta Esta traducción posiblemente sea la más innecesaria, pero noté que las letras de "Party" se iluminaban y quería intentar descubrir cómo estaba configurado. El resultado es que la he logrado traducir, entiendo cómo funciona, pero no creo que pueda replicarlo con otros gráficos Welcome/Bienvenido Esta tradució...
+                                </div>
+                                <footer class="mt-auto pt-3 border-top text-end"><a href="post-textos-graficos.html" class="btn btn-outline-secondary btn-sm post-read-more"> // SEGUIR LEYENDO » </a></footer> <!-- ENLACE LOCAL -->
+                           </div>
+                         </article>
+                    </div>
+
+                    <!-- Post: Tutorial Buscar Textos -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                       <article class="card h-100 shadow-sm project-card border-0 post-entry" id="post-summary-8074667183087849995">
+                           <figure class="mb-0"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgbpuEgUd5_V5RICW0BB4adTIhZgHNJQOJeUZnTuZLfk7wB_9eVmnOpRY96tIazeXPLES_SkZp_f715KsDRZEg3PH1su8utxHBH_D53aKOpsNEp9h2kap1zhhkuBnSN_Zj2DFitG98-43IKvF9OzUZcpkAriKqfoUqkZsP6J3h8sJJsdLUOVD4sLSEetJmN=w256-h170-p-k-no-nu" ... alt="Buscar Textos ROMs"></figure>
+                            <div class="card-body d-flex flex-column p-4">
+                               <header><h3 class="card-title font-orbitron h5 mb-2"><a href="post-buscar-textos.html" class="text-neon-teal">Tutorial: Buscar Textos en ROMs</a></h3></header> <!-- ENLACE LOCAL -->
+                               <div class="post-content-snippet description text-dim flex-grow-1 mb-3 snippet-text">
+                                   <!-- Snippet completo restaurado -->
+                                    El motivo principal por el que nació el Romhacking fue para traducir videojuegos a otros idiomas (...). Si tenemos suerte, el texto puede aparecer tal cual se escribe (...). Un ejemplo de esta forma de almacenamiento la podemos encontrar en juegos como One Piece o DBZ El Legado de Goku. Como veis, el texto es completamente visible. Hay caracteres que...
+                                </div>
+                               <footer class="mt-auto pt-3 border-top text-end"><a href="post-buscar-textos.html" class="btn btn-outline-secondary btn-sm post-read-more"> // SEGUIR LEYENDO » </a></footer> <!-- ENLACE LOCAL -->
+                            </div>
+                       </article>
+                   </div>
+
+                    <!-- Post: Tutorial Paletas 256 colores -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                         <article class="card h-100 shadow-sm project-card border-0 post-entry" id="post-summary-7116611299065770779">
+                            <figure class="mb-0"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEi_Hr273WV28ttBoA2RNYf0BNL4EAC4nZoOFYGUpAVDqEbY-W0IPSPEjRVdUvoYB9dOencXcUV-yg16QkC-XTrCIMqFDxh0_hxIPFQVUI99LBBQVZtmop1BYehq2pTJpL9ToAkQmtUva68qL-TvYThZMQFBQAJL-wY5f5H9LRHO4XoBCGPca0GVmA1uRQIR=w256-h160-p-k-no-nu" ... alt="Paletas 256 colores"></figure>
+                             <div class="card-body d-flex flex-column p-4">
+                                <header><h3 class="card-title font-orbitron h5 mb-2"><a href="post-paletas-256.html" class="text-neon-teal">Tutorial: Paletas 256 colores</a></h3></header> <!-- ENLACE LOCAL -->
+                                <div class="post-content-snippet description text-dim flex-grow-1 mb-3 snippet-text">
+                                     <!-- Snippet completo restaurado -->
+                                       En las ROMs no solo nos encontramos paletas de 16 colores (...) si no paletas de 256, 240, 228 (...). Ejemplos: De 256 colores: Usadas para imágenes (...). De >256 colores: Se reserva una o más paletas a elementos (...). Conjunto de Paletas (...). Cómo Modificarlas de forma rápida: Para corregir colores, darles intensidad...
+                                </div>
+                                <footer class="mt-auto pt-3 border-top text-end"><a href="post-paletas-256.html" class="btn btn-outline-secondary btn-sm post-read-more"> // SEGUIR LEYENDO » </a></footer> <!-- ENLACE LOCAL -->
+                            </div>
+                         </article>
+                    </div>
+                 </div>
+
+                 <!-- Paginación -->
+                 <div class="blog-pager text-center mt-5 pt-4 border-top border-secondary border-opacity-25" id="blog-pager">
+                      <!-- Este enlace sí puede ir al blogspot o eliminarlo si no hay más páginas -->
+                     <a class="blog-pager-older-link btn btn-outline-primary px-4" href="https://capsulacorp-zhacks.blogspot.com/search?updated-max=2024-09-06T09:07:00-07:00&max-results=7" target="_blank" rel="noopener noreferrer" title="Más entradas antiguas en Blogspot">
+                         Archivos Más Antiguos (Blog) <i class="fas fa-external-link-alt ms-1"></i>
+                     </a>
+                 </div>
+            </section>
+            <!-- ===== FIN POSTS ANTERIORES ===== -->
+
+             <hr class="my-5 border-glow opacity-50">
+
+            <!-- ============== Sección Categorías (Sidebar adaptado) ============== -->
+            <section id="categories-index" class="py-4">
+                <div class="container">
+                     <h2 class="text-center mb-5 section-title"><i class="fas fa-folder-tree me-3 text-info"></i> Explorar por Sector //</h2>
+                     <div class="row g-4 justify-content-center">
+                         <!-- Legacy of Goku II -->
+                         <div class="col-6 col-md-4 col-lg-3"><a href="https://capsulacorp-zhacks.blogspot.com/search/label/DBZ%3A%20El%20legado%20de%20Goku%20II" target="_blank" ...><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjS3M4e0hmZvXWCWSckhJ8RlaogXLiwvhhzkBFByBFmqJB9iadwRuVr1pm5NBX8np9dhd0SMgzaXe93aV-L0lS9NxAfSTm5QnfdDj9aAo_tSTBEktmS25LRTa8rtx1VY8615pp7cYolQ691HUAWXA5v6I0tFTvpP0gjLz8V7i85BMGCO_76nt7DWXsvsKgM=s256" ...><div class="category-overlay"><span>Legacy of Goku II</span></div></a></div>
+                        <!-- Aventura Avanzada -->
+                         <div class="col-6 col-md-4 col-lg-3"><a href="https://capsulacorp-zhacks.blogspot.com/search/label/Dragon%20Ball%3A%20Aventura%20Avanzada" ...><img src="https://blogger.googleusercontent.com/img/a/AVvXsEggvy_w979pT7vcLgznCX5ENbpG6U8VU5KJJHAZ3H-eaVEKPSQ0vnpyY-1iyFqci4t5fMiBBpnDrG1xgIDDl5hHJWQ7LCYOGr0cM8ryHVTRs7jWObMhhakkPbeqgyF_VfLRKdGVNIkc_IjGT5Q5A0UG2fKEJcI9BvW-oynlh54sff35oSPisikYOutoerkc=s256" ...><div class="category-overlay"><span>Aventura Avanzada</span></div></a></div>
+                         <!-- DBGT -->
+                         <div class="col-6 col-md-4 col-lg-3"><a href="https://capsulacorp-zhacks.blogspot.com/search/label/DBGT%3ATransformation" ...><img src="https://blogger.googleusercontent.com/img/a/AVvXsEh5iKsn9FEeKdh7KVCSHX1svVuXCAL3hA-B-HNuNLRa8rIGKSrvvT7NrCCFBwdYg-YSR9g1ydrEhZ69RX8T6hAN3uDsByF_UqiIoZNXLYI_ROfXkg13lw_eSS98I2Jah2av58YS6RCX-4RQDm_w3rmlje90L-VArM4RlQimoxKkv0AssSR9AyUspLWMOjLT=s256" ...><div class="category-overlay"><span>DBGT: Transformación</span></div></a></div>
+                         <!-- One Piece -->
+                        <div class="col-6 col-md-4 col-lg-3"><a href="https://capsulacorp-zhacks.blogspot.com/search/label/One%20Piece" ...><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiTzIhKfTIEXfN88M1S01rr1pgxQR8YpNX28KFZVumMIMYz1t7O1CZpBimNNwbaICuNawwKAgHKl1jy2cIqvPtZ_zjwrTivySop4JsUcvDS8huUXttWv5HZBklidw43oCjvliqs_QDWsnnyGkEeqrDX6CbgJifVy_jA0Yd-3pOQFc3JTX7TGMaBE_1nJESD=s256" ...><div class="category-overlay"><span>One Piece GBA</span></div></a></div>
+                     </div>
+                 </div>
+             </section>
+             <!-- ============== Fin Sección Categorías ============== -->
+        </div>
+    </main>
+
+    <!-- ============== Footer ============== -->
+    <footer class="footer-cc py-4">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 small">© 2024 <span class="fw-bold text-neon-teal">Capsula Corp Z-Hacks</span> // Unidad: Z-Hacks</p>
+                    <p class="text-white-50 small mb-0">// Proyecto No Oficial //</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end footer-links">
+                    <span class="text-white-50 small">DBZ © TOEI, B.S./S.</span> |
+                    <a href="https://capsulacorp-zhacks.blogspot.com/" target="_blank" rel="noopener noreferrer" class="text-white-50 small ms-2" title="Ir al blog original en Blogspot">Blog Legado</a> |
+                    <a href="#top" class="text-neon-lime small ms-3"><i class="fas fa-angle-double-up"></i> VOLVER ARRIBA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ============== Fin Footer ============== -->
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
